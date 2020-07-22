@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		
+		
+		* {
+			    margin: 0;
+			    padding: 0;
+			}
+			
+			ul {
+			    list-style: none;
+			}
+			
+			/*清除浮动*/
+			.clearfix:after {
+			    visibility: hidden;
+			    clear: both;
+			    display: block;
+			    content: ".";
+			    height: 0;
+			}
+			
+			.clearfix {
+			    *zoom: 1;
+			}
+			
+			.clear {
+			    clear: both;
+			}
+			
+			/*浮动公共类*/
+			.fl {
+			    float: left;
+			}
+			
+			.fr {
+			    float: right;
+			}
+			
+			
+			.w {
+			    width: 1205px;
+			    margin: 0 auto;
+			    position: relative;
+			}
+			
+			
+			input,
+			h1,
+			a {
+			    text-decoration: none;
+			}
+			
+			a {
+			    color: #343d42;
+			}
+			
+			a:hover {
+			    color: #49af4f;
+			    z-index: 99;
+			}
+			
+			/*设置无边框下划线*/
+			input,
+			button {
+			    border: 0;
+			    outline: none;
+			}
+			
+			/* 头部---------------------- */
+			.header {
+			    width: 100%;
+			    height: 60px;
+			    background-color: #343d42;
+				
+			}
+			
+			.header .logo img {
+			    width: 170px;
+			    height: 29px;
+			    margin-top: 15px;
+			}
+			
+			.header .w>span {
+			    cursor: pointer;
+			    float: left;
+			    color: #eee;
+			    font-size: 16px;
+			    line-height: 60px;
+			    margin-right: 24px;
+			}
+			
+			/* 课堂 */
+			.header .course {
+			    position: relative;
+			    margin-left: 20px;
+			}
+			
+			.header .course .course1 {
+			    display: none;
+			    width: 105px;
+			    position: absolute;
+			    background-color: #fff;
+			    line-height: 40px;
+			    color: #666;
+			    left: -10px;
+			    margin-top: -10px;
+			    border: .5px solid #f0f0f0;
+			}
+			
+			.header .course .course1 li {
+			    margin-left: 10px;
+			}
+			
+			/* 福利 */
+			.header .welfare {
+			    position: relative;
+			}
+			
+			.header .welfare .ewm {
+			    width: 240px;
+			    height: 240px;
+			    font-size: 14px;
+			    color: #333;
+			    line-height: 30px;
+			    text-align: center;
+			    border: .5px solid #f0f0f0;
+			    position: absolute;
+			    left: -80px;
+			}
+			
+			.header .welfare .ewm img {
+			    width: 145px;
+			    height: 145px;
+			    margin-top: 15px;
+			}
+			
+			.header .welfare .ewm p {
+			    font-size: 12px;
+			    color: #666;
+			    height: 26px;
+			    line-height: 26px;
+			}
+			
+			/* 搜索 */
+			.header .search {
+			    margin: 10px 6px 0 140px;
+			    background-color: #444;
+			    border-right: none;
+			    border-radius: 20px;
+			    width: 303px;
+			    height: 40px;
+			    float: left;
+			}
+			
+			.header .search div {
+			    position: relative;
+			    font-size: 14px;
+			    height: 100%;
+			    line-height: 40px;
+			    margin-left: 15px;
+			    float: left;
+			    cursor: pointer;
+			    color: #fff;
+			}
+			
+			.header .search input {
+			    width: 160px;
+			    height: 40px;
+			    font-size: 14px;
+			    margin-left: 10px;
+			    float: left;
+			    color: #aaa;
+			    background-color: #444;
+			}
+			
+			.header .search span {
+			    display: block;
+			    width: 60px;
+			    height: 41px;
+			    border-top-right-radius: 20px;
+			    border-bottom-right-radius: 20px;
+			    cursor: pointer;
+			    right: 0;
+			    top: -2px;
+			    font-size: 14px;
+			    background: #49af4f;
+			    color: #fff;
+			    line-height: 38px;
+			    z-index: 2;
+			    float: right;
+			    text-align: center;
+			}
+			
+			.header .search div ul {
+			    display: none;
+			    position: absolute;
+			    left: -15px;
+			    top: 43px;
+			}
+			
+			.header .search div ul li {
+			    width: 58px;
+			    background-color: #fff;
+			    color: #666;
+			    text-align: center;
+			}
+			
+			/* 登录 */
+			.header .login {
+			    font-size: 14px;
+			    height: 32px;
+			    float: right;
+			    margin-top: 16px;
+			    color: #fff;
+			}
+			
+			.header .login a,
+			.header .login i {
+			    margin-right: 15px;
+			    color: #fff;
+			}
+			
+			.header .login a:hover {
+			    color: #49af4f;
+			    ;
+			}
+			
+			.header .login a:last-child {
+			    margin-right: 0px;
+			    z-index: 99;
+			}
+			
+			.header .login img {
+			    border-radius: 15px;
+			    vertical-align: middle;
+			}
+			
+		/*/////////////////////////////*/
+		.top-img{
+			width:100%;
+			height:295px;
+			position:absolute;
+			top:48px;
+			background:url(img/bb788a81-eedc-4bc4-b522-a6d862371435.jpg);
+		}
+		.link-nav{
+			width:80%;
+			height:120px;
+			background:white;
+			position:absolute;
+			top:343px;
+			transform: translateY(-50%);
+			left:10%;
+			z-index: 2;
+			/*transform: translateX(-50%);*/
+		}
+		.link-nav>div>ul{
+			height:120px;
+		}
+		.link-nav>div>ul>li{
+			list-style: none;
+			float:left;
+			line-height: 120px;
+			height:120px;
+			margin-right: 10%;
+		}
+		.link-nav>div>ul>li:nth-of-type(1){
+			list-style: none;
+			float:left;
+			line-height: 120px;
+			height:120px;
+			margin-left: 15%;
+			
+		}
+		.link-nav>div>ul>li>span{
+			position:relative;
+			top:20px;
+			left:-54px;
+			
+		}
+		/*.top-banner{*/
+			/*width:100%;
+			height:173px;
+			background:blue;
+		}*/
+		.onlineplay{
+			position:absolute;
+			width:100%;
+			height:300px;
+			top:343px;
+			background:gainsboro;
+		}
+		.onlineplay>div{
+			width:50%;
+			height:154px;
+			background:red;
+		}
+		.onlineplay_left{
+			position: absolute;
+			left:0px;
+			top: 50%;
+			transform: translateY(-30%);
+		}
+		.onlineplay_right{
+			position: absolute;
+			right:0px;
+			top: 50%;
+			transform: translateY(-30%);
+		}
+		.limit-coupon{
+			position:absolute;
+			width:100%;
+			height:273px;
+			top:643px;
+			
+			background:white;
+		}
+		.limit-coupon>div{
+			margin-left:10%;
+			font-size: 25px;
+			margin-top:30px;
+		}
+		.limit-coupon>ul{
+			width:80%;
+			margin-top:10px;
+			margin-left:auto;
+			margin-right: auto;
+		}
+		.limit-coupon>ul>li{
+			list-style: none;
+			height:156px;
+			float:left;
+			margin-right: 2%;
+		}
+		.limit-coupon>ul>li>img{			
+			height:156px;			
+		}
+		.rec-micro{
+			width:100%;
+			height:767px;
+			position:absolute;
+			top:916px;
+			background:white;
+		}
+		
+		.rec-micro_img{
+			
+		}
+		.rec-micro_font{
+			padding:20px;
+		}
+		.rec-micro_font>div:nth-of-type(1){
+			font-size:25px;
+		}
+		.rec-micro_font>div:nth-of-type(2){
+			font-size:14px;
+			color:gray;
+		}
+		.rec-micro>div{
+			margin-left:10%;
+			font-size: 25px;
+			margin-top:30px;
+		}
+		.rec-micro>ul{
+			width:80%;
+			margin-top:10px;
+			margin-left:auto;
+			margin-right: auto;
+		}
+		.rec-micro>ul>li{
+			list-style: none;
+			float:left;
+			margin-right: 2%;
+			margin-bottom: 2%;
+			border:1px solid gainsboro;
+			
+		}
+		.rec-micro>ul>li>a{
+			text-decoration: none;
+			color:black;
+		}
+		.list-wrap{
+			width:100%;
+			position:absolute;
+			top:1683px;
+			/*height:61px;*/
+			border-bottom:1px solid gainsboro;
+			border-top:1px solid gainsboro;
+		}
+		.list-wrap_nav>ul{
+			width:80%;
+			height:61px;
+			margin-left: 10%;
+		}
+		.list-wrap_nav>ul>li{
+			width:150px;
+			height:61px;
+			list-style: none;
+			float:left;
+			/*margin-right:5%;*/
+			text-align:center;
+			line-height: 61px;
+			font-size: 18px;
+		}
+		.list-wrap_nav>ul>li:nth-of-type(1){
+			color:white;
+			background:#1E90FF;
+		}
+		.list-wrap_nav>ul>li:hover{
+			color:dodgerblue;
+		}
+		.list-wrap_nav_mock{
+			width:100%;
+			background: gainsboro;
+			position:absolute;
+			
+		}
+		.list-wrap_nav_mock>ul{
+			width:70%;
+			/*background: gainsboro;*/
+			margin-left: 10%;	
+		}
+		.list-wrap_nav_mock>ul>li{
+			width:100%;
+			list-style: none;
+			/*border:1px solid red;*/
+			/*background: gainsboro;*/
+			/*margin-left: 10%;*/
+			
+		}
+		
+		.list-wrap_nav_mock_left{
+			width:30%;
+			/*position:absolute;*/
+		}
+		.list-wrap_nav_mock_right{
+			width:719px;
+			height:224px;
+			/*border:1px solid red;*/
+			position:absolute;
+			left:547px;
+			top:0px;
+		}
+		.list-wrap_nav_mock_right1{
+			width:719px;
+			height:224px;
+			/*border:1px solid red;*/
+			position:absolute;
+			left:547px;
+			top:224px;
+		}
+		.list-wrap_nav_mock_right2{
+			width:719px;
+			height:224px;
+			/*border:1px solid red;*/
+			position:absolute;
+			left:547px;
+			top:448px;
+		}
+		.list-wrap_nav_mock_right3{
+			width:719px;
+			height:224px;
+			/*border:1px solid red;*/
+			position:absolute;
+			left:547px;
+			top:672px;
+		}
+		.list-wrap_nav_mock_right4{
+			width:719px;
+			height:224px;
+			/*border:1px solid red;*/
+			position:absolute;
+			left:547px;
+			top:896px;
+		}
+		/*.list-wrap_nav_mock_div_left{
+			width:30%;
+			
+		}
+		.list-wrap_nav_mock_div_left>img{
+			width:100%;
+		}
+		.list-wrap_nav_mock_div_right{
+			width:60%;
+			
+			border:1px solid red;
+			top:61px;
+			margin-left:32%;
+			margin-top:10px;
+			
+		}*/
+		/*.list-company{
+			width:90%;
+			height:320px;
+			position:absolute;
+			top:1744px;
+			background:green;
+		}*/
+	</style>
+	<body>
+		<!--<div class="father">-->
+		<!--<div class="header">
+			<div class="header_left"><a class="class="header_left_a" href="#"> <img class="header_left_a_img" src="img/33e5b2cd9ba14ca0879daf7b036ed70c.png"/></a></div>
+			<div class="header_middle">
+				<ul>
+					<li>
+						课程分类
+						<ul>
+							<li>职场提升</li>
+							<li>编程与开发</li>
+							<li>AI/数据科学</li>
+							<li>产品与运营</li>
+							<li>设计创意</li>
+							<li>电商运营</li>
+							<li>语言学习</li>
+							<li>职业考试</li>
+							<li>生活兴趣</li>
+						</ul>
+					</li>
+					<li>微专业</li>
+					<li>关注领福利</li>
+				</ul>
+			</div>
+			<div class="header_right"></div>-->
+			<div class="header">
+		    <div class="w">
+		        <!-- logo -->
+		        <div class="logo fl">
+		            <img src="img/logo1.png" alt="">
+		        </div>
+		        <!-- 课程 -->
+		        <span class="course">课程分类 >
+		            <div class="course1">
+		                <ul>
+		                    <li>职场提升</li>
+		                    <li>编程开发</li>
+		                    <li>AI/数据科学</li>
+		                    <li>产品与运营</li>
+		                    <li>设计创意</li>
+		                    <li>电商运营</li>
+		                    <li>语言学习</li>
+		                    <li>职业考试</li>
+		                    <li>生活兴趣</li>
+		                </ul>
+		            </div>
+		        </span>
+		        <span>微专业</span>
+		        <span class="welfare">关注领福利
+		            <div class="ewm">
+		                <h5>关注云课堂微信公众号</h5>
+		                <p>-领取课程免费福利，超值学习资料-</p>
+		                <img src="img/ewm.jpg" alt="">
+		            </div>
+		        </span>
+		        <!-- 搜索框 -->
+		        <div class="search">
+		            <div>课堂 >
+		                <ul>
+		                    <li>课堂</li>
+		                    <li>网校</li>
+		                </ul>
+		            </div>
+		            <input type="text" value="Python数据分析师的">
+		            <span>搜索</span>
+		        </div>
+		
+		        <!-- 登录 -->
+		        <div class="login">
+		            <a href="#">我的学习</a>
+		            <i>丨</i>
+		            <i>丨</i>
+		            <a href="#">登录/注册</a>
+		            <img src="img/login.jpg" alt="">
+		        </div>
+		
+		
+		
+		    </div>
+		
+		</div>
+		</div>
+		<div class="top-img"></div>
+		<div class="link-nav">
+			<div>	
+				<ul>
+					<li><img src="img/db28491d-6a6b-461b-ac1c-e017f0e81bc1.png" alt="" /><span>数据分析</span></li>
+					<li><img src="img/cc0a2904-51af-4dc0-9dd4-ccf8706d41e1.png" alt="" /><span>人工智能</span></li>
+					<li><img src="img/97ab6c18-a128-4447-add4-16f6eaa5b9a5.png" alt="" /><span>技术开发</span></li>
+					<li><img src="img/05a31d96-f972-40de-acb3-859980928be2.png" alt="" /><span>设计·摄影</span></li>
+					<li><img src="img/6c86436a-a020-4e58-bd5d-e03a9a876a39.png" alt="" /><span>产品·运营</span></li>
+				</ul>	
+			</div>
+			
+		</div>
+		<!--<div class="top-banner"></div>-->
+		<div class="onlineplay">
+			<div class="onlineplay_left">a</div>
+			<div class="onlineplay_right">b</div>
+		</div>
+		<div class="limit-coupon">
+			<div>限时优惠</div>
+			<ul>
+				<li><a href=""><img src="img/ad4b7498-1528-4132-af02-9dcf44b854c3.png" alt="" /></a></li>
+				<li><a href=""><img src="img/ad4b7498-1528-4132-af02-9dcf44b854c3.png" alt="" /></a></li>
+				<li><a href=""><img src="img/ad4b7498-1528-4132-af02-9dcf44b854c3.png" alt="" /></a></li>
+			</ul>
+		</div>
+		<div class="rec-micro">
+			<div>推荐微专业</div>
+			<ul>
+				<li>
+					<a href="">
+						<div id="">
+							<div class="rec-micro_img">
+								<img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" />
+							</div>
+							<div class="rec-micro_font">
+								<div>产品经理</div>
+								<div>四大领域实战，破解产品就业难题</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div id="">
+							<div class="rec-micro_img"><img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" /></div>
+							<div class="rec-micro_font">
+								<div>产品经理</div>
+								<div>四大领域实战，破解产品就业难题</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div id="">
+							<div class="rec-micro_img"><img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" /></div>
+							<div class="rec-micro_font">
+								<div>产品经理</div>
+								<div>四大领域实战，破解产品就业难题</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div id="">
+							<div class="rec-micro_img"><img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" /></div>
+							<div class="rec-micro_font">
+								<div>产品经理</div>
+								<div>四大领域实战，破解产品就业难题</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div id="">
+							<div class="rec-micro_img"><img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" /></div>
+							<div class="rec-micro_font">
+								<div>产品经理</div>
+								<div>四大领域实战，破解产品就业难题</div>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div id="">
+							<div class="rec-micro_img"><img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" /></div>
+							<div class="rec-micro_font">
+								<div>产品经理</div>
+								<div>四大领域实战，破解产品就业难题</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="list-wrap">
+			<div class="list-wrap_nav">
+				<ul>
+					<li class="onclick_change_blue">数据分析</li>
+					<li class="onclick_change_blue">人工智能</li>
+					<li class="onclick_change_blue">技术开发</li>
+					<li class="onclick_change_blue">设计·摄影</li>
+					<li class="onclick_change_blue">产品·运营</li>
+				</ul>
+			</div>
+			<div class="list-wrap_nav_mock">
+				<ul>
+					<li>
+						<!--<div class="list-wrap_nav_mock_div">
+							<div class="list-wrap_nav_mock_div_left">
+								<img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" />
+							</div>
+							<div class="list-wrap_nav_mock_div_right">
+								aaaaaaaaaaaaaaaaaaaaaa
+							</div>
+						</div>-->
+						<a href="">
+							<div class="list-wrap_nav_mock_left">
+								<img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" />
+						</div>
+						<div class="list-wrap_nav_mock_right">
+							地产数据分析师 - 来这里，成为最懂数据的地产人
+城市数据团共6门课程
+从城市进入到土地研判，从项目市场定位到大数据营销，我们以真实的数据分析案例，帮助你在补全传统行业逻辑思维的同时向地产大数据思维进行转变，开拓地产人的数据化工作流。
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+						<div class="list-wrap_nav_mock_left">
+								<img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" />
+						</div>
+						<div class="list-wrap_nav_mock_right1">
+							地产数据分析师 - 来这里，成为最懂数据的地产人
+城市数据团共6门课程
+从城市进入到土地研判，从项目市场定位到大数据营销，我们以真实的数据分析案例，帮助你在补全传统行业逻辑思维的同时向地产大数据思维进行转变，开拓地产人的数据化工作流。
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+						<div class="list-wrap_nav_mock_left">
+								<img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" />
+						</div>
+						<div class="list-wrap_nav_mock_right2">
+							地产数据分析师 - 来这里，成为最懂数据的地产人
+城市数据团共6门课程
+从城市进入到土地研判，从项目市场定位到大数据营销，我们以真实的数据分析案例，帮助你在补全传统行业逻辑思维的同时向地产大数据思维进行转变，开拓地产人的数据化工作流。
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+						<div class="list-wrap_nav_mock_left">
+								<img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" />
+						</div>
+						<div class="list-wrap_nav_mock_right3">
+							地产数据分析师 - 来这里，成为最懂数据的地产人
+城市数据团共6门课程
+从城市进入到土地研判，从项目市场定位到大数据营销，我们以真实的数据分析案例，帮助你在补全传统行业逻辑思维的同时向地产大数据思维进行转变，开拓地产人的数据化工作流。
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+						<div class="list-wrap_nav_mock_left">
+								<img src="img/199135B5FAFB4BB676EAA6D47516174E.png" alt="" />
+						</div>
+						<div class="list-wrap_nav_mock_right4">
+							地产数据分析师 - 来这里，成为最懂数据的地产人
+城市数据团共6门课程
+从城市进入到土地研判，从项目市场定位到大数据营销，我们以真实的数据分析案例，帮助你在补全传统行业逻辑思维的同时向地产大数据思维进行转变，开拓地产人的数据化工作流。
+						</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="list-company"></div>
+		<div class="footer"></div>
+		<!--</div>-->
+		<script>
+			var onclick_change_blue = document.getElementsByClassName("onclick_change_blue");
+			console.log(onclick_change_blue.length);
+			for(var i=0;i<onclick_change_blue.length;i++){			
+				onclick_change_blue[i].onclick = function(){
+					for(var i=0;i<onclick_change_blue.length;i++){
+					onclick_change_blue[i].style.background = "white";
+					onclick_change_blue[i].style.color = "black";
+				}
+					this.style.background = "#1E90FF";
+					this.style.color = "white";
+					console.log(this);
+				}
+			}
+//			function
+		</script>
+	</body>
+</html>
